@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.summary         = "an OpenID server for making tests of OpenID clients implementations"
 
   s.description = <<-EOF
-Ruby OpenID Test Server (ROST) provides a basic OpenID server made in top of the Rack gem.
+Ruby OpenID Test Server (ROTS) provides a basic OpenID server made in top of the Rack gem.
 With this small server, you can make dummy OpenID request for testing purposes,
 the success of the response will depend on a parameter given on the URL of the authentication request.
   EOF
