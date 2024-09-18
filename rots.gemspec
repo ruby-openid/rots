@@ -29,6 +29,6 @@ the success of the response will depend on a parameter given on the URL of the a
   s.license         = 'MIT'
 
   s.add_development_dependency 'rspec', "~> 2.14.1"
-  s.add_development_dependency 'rack', "~> 1.5.2"
-  s.add_development_dependency 'ruby-openid', "~> 2.3.0"
+  s.add_development_dependency 'rack', "~> 1.6"
+  s.add_development_dependency 'ruby-openid2'
 end
