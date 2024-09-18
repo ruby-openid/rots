@@ -14,14 +14,20 @@ With this small server, you can make dummy OpenID request for testing purposes,
 the success of the response will depend on a parameter given on the URL of the authentication request.
   EOF
 
-  s.files           = ["AUTHORS", "README", "Rakefile", "bin/rots", "lib/rots.rb", "lib/rots/identity_page_app.rb", "lib/rots/server_app.rb", "lib/rots/test_helper.rb","rots.gemspec", "spec/server_app_spec.rb", "spec/spec_helper.rb"] 
-  s.bindir          = 'bin'
-  s.executables     << 'rots'
+  s.files = [
+    # Splats (alphabetical)
+    "{bin,lib}/**/*",
+    # Files (alphabetical)
+    "AUTHORS",
+    "README",
+  ]
+  # bin/ is scripts, in any available language, for development of this specific gem
+  # exe/ is for ruby scripts that will ship with this gem to be used by other tools
+  s.bindir = "exe"
+  s.executables = %w[
+    rots
+  ]
   s.require_path    = 'lib'
-  s.has_rdoc        = true
-  s.extra_rdoc_files = ['README']
-  s.test_files      = ['spec/server_app_spec.rb', 'spec/spec_helper.rb']
-
   s.author          = 'Roman Gonzalez'
   s.email           = 'romanandreg@gmail.com'
   s.homepage        = 'http://github.com/roman'
