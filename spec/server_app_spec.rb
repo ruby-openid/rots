@@ -10,8 +10,8 @@ describe Rots::ServerApp do
       request  = Rack::MockRequest.new(Rots::ServerApp.new({'sreg' => {}}, 
         {:storage => File.join(*%w(. tmp rots)) }))
       response = request.get("/")
-      response.should be_ok
-      response.body.should == "<html><body><h1>ROTS => This is an OpenID endpoint</h1></body></html>"
+      expect(response).to be_ok
+      expect(response.body).to eq("<html><body><h1>ROTS => This is an OpenID endpoint</h1></body></html>")
     end
 
   end
@@ -42,7 +42,7 @@ describe Rots::ServerApp do
           it "should return an openid.mode equal to id_res" do
             response = checkid_setup(@request, 'openid.success' => 'true')
             params = openid_params(response)
-            params['openid.mode'].should == 'id_res'
+            expect(params['openid.mode']).to eq('id_res')
           end
 
         end
@@ -52,8 +52,8 @@ describe Rots::ServerApp do
           it "should return an openid.mode equal to setup_needed" do
             response = checkid_immediate(@request)
             params = openid_params(response)
-            params['openid.mode'].should == 'setup_needed'
-            params['user_setup_url'].should == ''
+            expect(params['openid.mode']).to eq('setup_needed')
+            expect(params['user_setup_url']).to eq('')
           end
 
         end
@@ -67,7 +67,7 @@ describe Rots::ServerApp do
           it "should return an openid.mode equal to id_res" do
             response = checkid_setup(@request, 'openid.success' => 'true')
             params = openid_params(response)
-            params['openid.mode'].should == 'id_res'
+            expect(params['openid.mode']).to eq('id_res')
           end
 
         end
@@ -77,7 +77,7 @@ describe Rots::ServerApp do
           it "should return an openid.mode equal to cancel" do
             response = checkid_setup(@request)
             params = openid_params(response)
-            params['openid.mode'].should == 'cancel'
+            expect(params['openid.mode']).to eq('cancel')
           end
 
         end
@@ -87,7 +87,7 @@ describe Rots::ServerApp do
           it "should return an openid.mode equal to id_res" do
             response = checkid_setup(@request, 'openid.success' => 'true')
             params = openid_params(response)
-            params['openid.mode'].should == 'id_res'
+            expect(params['openid.mode']).to eq('id_res')
           end
           
           it "should return all the sreg fields" do
@@ -98,11 +98,11 @@ describe Rots::ServerApp do
               'openid.sreg.optional' => 'dob,gender'
             })
             params = openid_params(response)
-            params['openid.sreg.email'].should == "john@doe.com"
-            params['openid.sreg.nickname'].should == 'johndoe'
-            params['openid.sreg.fullname'].should == "John Doe"
-            params['openid.sreg.dob'].should == "1985-09-21"
-            params['openid.sreg.gender'].should == "M"
+            expect(params['openid.sreg.email']).to eq("john@doe.com")
+            expect(params['openid.sreg.nickname']).to eq('johndoe')
+            expect(params['openid.sreg.fullname']).to eq("John Doe")
+            expect(params['openid.sreg.dob']).to eq("1985-09-21")
+            expect(params['openid.sreg.gender']).to eq("M")
           end
           
         end
