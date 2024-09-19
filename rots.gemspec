@@ -34,10 +34,17 @@ the success of the response will depend on a parameter given on the URL of the a
   s.rubyforge_project = 'rots'
   s.license         = 'MIT'
 
+  s.add_dependency "date"
   s.add_dependency "net-http"
-  s.add_dependency "yaml"
-  s.add_dependency "rack", ">= 2.0"
+  s.add_dependency "openssl"
+  s.add_dependency "optparse"
+  s.add_dependency "rack", ">= 2"
+  s.add_dependency "rackup", ">= 2"
   s.add_dependency "ruby-openid2", "~> 3.0"
+  s.add_dependency "stringio"
+  s.add_dependency "webrick"
+  s.add_dependency "yaml", "~> 0.3"
+  s.add_dependency "psych", "~> 5.1"
 
   s.add_development_dependency "rspec", "~> 3.13"
 end

@@ -1,4 +1,4 @@
-# external gems
+# external libraries
 require 'rack/request'
 require 'rack/response'
 require 'rack/utils'

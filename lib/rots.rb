@@ -1,5 +1,17 @@
+# stdlib in Ruby < 3, gem after
+require "net/http"
+
 # External Libraries
-require 'yaml'
+require "date"
+require "openssl"
+require "optparse"
+require "rack"
+require "rackup"
+require "openid" # ruby-openid2
+require "stringio"
+require "webrick"
+require "yaml"
+require "psych"
 
 # This library
 require_relative "rots/version"

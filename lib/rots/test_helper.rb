@@ -1,7 +1,7 @@
 # stdlib in Ruby < 3, gem after
 require "net/http"
 
-# external gems
+# external libraries
 require "openid/consumer"
 require "openid/consumer/checkid_request.rb"
 

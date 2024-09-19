@@ -1,7 +1,7 @@
 # stdlib
 require 'fileutils'
 
-# external gems
+# external libraries
 require 'openid'
 require 'openid/extension'
 require 'openid/extensions/sreg'
@@ -41,7 +41,7 @@ module Rots
     def on_openid_request(env)
       create_wrappers(env)
       if @openid_request.nil?
-        [200, {'Content-Type' => 'text/html'}, 
+        [200, {Rack::CONTENT_TYPE => 'text/html'},
           ["<html><body><h1>ROTS => This is an OpenID endpoint</h1></body></html>"] ]
       else
         yield
@@ -124,13 +124,13 @@ module Rots
     end
 
     def redirect(uri)
-      [ 303, {'Content-Length'=>'0', 'Content-Type'=>'text/plain',
+      [ 303, {Rack::CONTENT_LENGTH=>'0', Rack::CONTENT_TYPE=>'text/plain',
         'Location' => uri},
         [] ]
     end
 
     def bad_request()
-      [ 400, {'Content-Type'=>'text/plain', 'Content-Length'=>'0'},
+      [ 400, {Rack::CONTENT_TYPE=>'text/plain', Rack::CONTENT_LENGTH=>'0'},
         [] ]
     end
     

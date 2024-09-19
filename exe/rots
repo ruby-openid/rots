@@ -1,22 +1,6 @@
 #!/usr/bin/env ruby
 # -*- ruby -*-
 
-require 'bundler/inline'
-
-gemfile do
-  source 'https://rubygems.org'
-  git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
-  gem "date"
-  gem "openssl"
-  gem "optparse"
-  gem "webrick"
-  gem "rack", ">= 2"
-  gem "rackup", ">= 2"
-  gem "ruby-openid2", "~> 3.0"
-  gem "stringio"
-  gem "yaml", "~> 0.3"
-end
-
 # Require rots library this script is part of:
 require_relative "../lib/rots"
 
@@ -81,7 +65,7 @@ end
 
 opts.parse!(ARGV)
 
-config = YAML.load(server_options[:config])
+config = YAML.load(server_options[:config], permitted_classes: [Date])
 
 require "ruby-debug" if server_options[:debugger]
 

@@ -2,18 +2,33 @@ PATH
   remote: .
   specs:
     rots (0.2.2)
+      date
       net-http
-      rack (>= 2.0)
+      openssl
+      optparse
+      psych (~> 5.1)
+      rack (>= 2)
+      rackup (>= 2)
       ruby-openid2 (~> 3.0)
-      yaml
+      stringio
+      webrick
+      yaml (~> 0.3)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    date (3.3.4)
     diff-lcs (1.5.1)
     net-http (0.4.1)
       uri
+    openssl (3.2.0)
+    optparse (0.5.0)
+    psych (5.1.2)
+      stringio
     rack (3.1.7)
+    rackup (2.1.0)
+      rack (>= 3)
+      webrick (~> 1.8)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -29,8 +44,10 @@ GEM
     rspec-support (3.13.1)
     ruby-openid2 (3.0.0)
       version_gem (~> 1.1, >= 1.1.4)
+    stringio (3.1.1)
     uri (0.13.1)
     version_gem (1.1.4)
+    webrick (1.8.1)
     yaml (0.3.0)
 
 PLATFORMS
