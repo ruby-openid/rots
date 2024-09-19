@@ -10,8 +10,8 @@ gemfile do
   gem "openssl"
   gem "optparse"
   gem "webrick"
-  gem "rack", ">= 1.5" # Not compatible with rack v2+ yet
-  gem "rackup"
+  gem "rack", ">= 2"
+  gem "rackup", ">= 2"
   gem "ruby-openid2", "~> 3.0"
   gem "stringio"
   gem "yaml", "~> 0.3"

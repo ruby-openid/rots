@@ -3,7 +3,7 @@ PATH
   specs:
     rots (0.2.2)
       net-http
-      rack (~> 1.6)
+      rack (>= 2.0)
       ruby-openid2 (~> 3.0)
       yaml
 
@@ -13,7 +13,7 @@ GEM
     diff-lcs (1.5.1)
     net-http (0.4.1)
       uri
-    rack (1.6.13)
+    rack (3.1.7)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)

@@ -36,7 +36,7 @@ the success of the response will depend on a parameter given on the URL of the a
 
   s.add_dependency "net-http"
   s.add_dependency "yaml"
-  s.add_dependency "rack", "~> 1.6"
+  s.add_dependency "rack", ">= 2.0"
   s.add_dependency "ruby-openid2", "~> 3.0"
 
   s.add_development_dependency "rspec", "~> 3.13"
