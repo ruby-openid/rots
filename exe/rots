@@ -1,11 +1,21 @@
 #!/usr/bin/env ruby
 # -*- ruby -*-
 
-$:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require "rubygems"
-require "optparse"
-require "rack"
-require "rots"
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+  gem "date"
+  gem "openssl"
+  gem "optparse"
+  gem "webrick"
+  gem "rack", "~> 1.5" # Not compatible with rack v2+ yet
+  gem "rots", github: "VitalConnectInc/rots"
+  gem "ruby-openid2", "~> 3.0"
+  gem "stringio"
+  gem "yaml", "~> 0.3"
+end
 
 server_options = {
   :debugger => false,
@@ -68,7 +78,7 @@ end
 
 opts.parse!(ARGV)
 
-config = YAML.load(server_options[:config])
+config = YAML.load(server_options[:config], permitted_classes: [Date])
 
 require "ruby-debug" if server_options[:debugger]
 
@@ -88,7 +98,8 @@ end
 
 puts "\x1B[32mRunning OpenID Test server on port 1123\x1B[0m" if server_options[:verbose]
 begin 
-  Rack::Handler::Mongrel.run server, :Port => server_options[:port]
-rescue LoadError, NameError
   Rack::Handler::WEBrick.run server, :Port => server_options[:port]
+rescue LoadError, NameError
+  # Rack::Handler::Mongrel.run server, :Port => server_options[:port]
+  warn "Failed to start rots"
 end
