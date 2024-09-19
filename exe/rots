@@ -10,7 +10,8 @@ gemfile do
   gem "openssl"
   gem "optparse"
   gem "webrick"
-  gem "rack", "~> 1.5" # Not compatible with rack v2+ yet
+  gem "rack", ">= 1.5" # Not compatible with rack v2+ yet
+  gem "rackup"
   gem "rots", github: "VitalConnectInc/rots"
   gem "ruby-openid2", "~> 3.0"
   gem "stringio"
@@ -78,7 +79,7 @@ end
 
 opts.parse!(ARGV)
 
-config = YAML.load(server_options[:config], permitted_classes: [Date])
+config = YAML.load(server_options[:config])
 
 require "ruby-debug" if server_options[:debugger]
 
@@ -98,5 +99,5 @@ end
 
 puts "\x1B[32mRunning OpenID Test server on port 1123\x1B[0m" if server_options[:verbose]
 
-Rack::Handler::WEBrick.run server, :Port => server_options[:port]
+Rackup::Server.start app: server, port: server_options[:port]
 
