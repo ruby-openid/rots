@@ -1,0 +1,38 @@
+PATH
+  remote: .
+  specs:
+    rots (0.2.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.5.1)
+    rack (1.6.13)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.1)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.1)
+    ruby-openid2 (3.0.0)
+      version_gem (~> 1.1, >= 1.1.4)
+    version_gem (1.1.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rack (~> 1.6)
+  rots!
+  rspec (~> 3.13)
+  ruby-openid2 (~> 3.0)
+
+BUNDLED WITH
+   1.17.3

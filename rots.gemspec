@@ -36,5 +36,5 @@ the success of the response will depend on a parameter given on the URL of the a
 
   s.add_development_dependency 'rspec', "~> 3.13"
   s.add_development_dependency 'rack', "~> 1.6"
-  s.add_development_dependency 'ruby-openid2'
+  s.add_development_dependency 'ruby-openid2', "~> 3.0"
 end
