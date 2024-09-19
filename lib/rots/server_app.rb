@@ -1,3 +1,7 @@
+# stdlib
+require 'fileutils'
+
+# external gems
 require 'openid'
 require 'openid/extension'
 require 'openid/extensions/sreg'
@@ -5,8 +9,6 @@ require 'openid/store/filesystem'
 require 'openid/util'
 require 'rack/request'
 require 'rack/utils'
-require 'fileutils'
-
 
 module Rots
   

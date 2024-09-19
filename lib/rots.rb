@@ -1,12 +1,12 @@
-module Rots
-  
-  def self.release
-    "0.2.2"
-  end
-  
-end
-
+# External Libraries
 require 'yaml'
-require "rots/server_app"
-require "rots/identity_page_app"
-require "rots/test_helper"
+
+# This library
+require_relative "rots/version"
+require_relative "rots/server_app"
+require_relative "rots/identity_page_app"
+require_relative "rots/test_helper"
+
+# Namespace for this gem
+module Rots
+end

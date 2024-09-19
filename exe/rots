@@ -12,11 +12,13 @@ gemfile do
   gem "webrick"
   gem "rack", ">= 1.5" # Not compatible with rack v2+ yet
   gem "rackup"
-  gem "rots", github: "VitalConnectInc/rots"
   gem "ruby-openid2", "~> 3.0"
   gem "stringio"
   gem "yaml", "~> 0.3"
 end
+
+# Require rots library this script is part of:
+require_relative "../lib/rots"
 
 server_options = {
   :debugger => false,
