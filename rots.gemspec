@@ -34,7 +34,10 @@ the success of the response will depend on a parameter given on the URL of the a
   s.rubyforge_project = 'rots'
   s.license         = 'MIT'
 
-  s.add_development_dependency 'rspec', "~> 3.13"
-  s.add_development_dependency 'rack', "~> 1.6"
-  s.add_development_dependency 'ruby-openid2', "~> 3.0"
+  s.add_dependency "net-http"
+  s.add_dependency "yaml"
+  s.add_dependency "rack", "~> 1.6"
+  s.add_dependency "ruby-openid2", "~> 3.0"
+
+  s.add_development_dependency "rspec", "~> 3.13"
 end

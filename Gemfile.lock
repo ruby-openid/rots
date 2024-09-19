@@ -2,11 +2,17 @@ PATH
   remote: .
   specs:
     rots (0.2.2)
+      net-http
+      rack (~> 1.6)
+      ruby-openid2 (~> 3.0)
+      yaml
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.5.1)
+    net-http (0.4.1)
+      uri
     rack (1.6.13)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -23,16 +29,16 @@ GEM
     rspec-support (3.13.1)
     ruby-openid2 (3.0.0)
       version_gem (~> 1.1, >= 1.1.4)
+    uri (0.13.1)
     version_gem (1.1.4)
+    yaml (0.3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  rack (~> 1.6)
   rots!
   rspec (~> 3.13)
-  ruby-openid2 (~> 3.0)
 
 BUNDLED WITH
-   1.17.3
+   2.4.22
