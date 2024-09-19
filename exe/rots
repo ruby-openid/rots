@@ -97,9 +97,6 @@ server = Rack::Builder.new do
 end
 
 puts "\x1B[32mRunning OpenID Test server on port 1123\x1B[0m" if server_options[:verbose]
-begin 
-  Rack::Handler::WEBrick.run server, :Port => server_options[:port]
-rescue LoadError, NameError
-  # Rack::Handler::Mongrel.run server, :Port => server_options[:port]
-  warn "Failed to start rots"
-end
+
+Rack::Handler::WEBrick.run server, :Port => server_options[:port]
+
