@@ -2,19 +2,19 @@
 $:.push File.expand_path("../lib", __FILE__)
 require "rots/version"
 
-Gem::Specification.new do |s|
-  s.name            = "rots"
-  s.version         = Rots::VERSION
-  s.platform        = Gem::Platform::RUBY
-  s.summary         = "an OpenID server for making tests of OpenID clients implementations"
+Gem::Specification.new do |spec|
+  spec.name            = "rots"
+  spec.version         = Rots::VERSION
+  spec.platform        = Gem::Platform::RUBY
+  spec.summary         = "an OpenID server for making tests of OpenID clients implementations"
 
-  s.description = <<-EOF
+  spec.description = <<-EOF
 Ruby OpenID Test Server (ROST) provides a basic OpenID server made in top of the Rack gem.
 With this small server, you can make dummy OpenID request for testing purposes,
 the success of the response will depend on a parameter given on the URL of the authentication request.
   EOF
 
-  s.files = [
+  spec.files = [
     # Splats (alphabetical)
     "{bin,lib}/**/*",
     # Files (alphabetical)
@@ -23,28 +23,29 @@ the success of the response will depend on a parameter given on the URL of the a
   ]
   # bin/ is scripts, in any available language, for development of this specific gem
   # exe/ is for ruby scripts that will ship with this gem to be used by other tools
-  s.bindir = "exe"
-  s.executables = %w[
+  spec.bindir = "exe"
+  spec.executables = %w[
     rots
   ]
-  s.require_path    = 'lib'
-  s.author          = 'Roman Gonzalez'
-  s.email           = 'romanandreg@gmail.com'
-  s.homepage        = 'http://github.com/roman'
-  s.rubyforge_project = 'rots'
-  s.license         = 'MIT'
+  spec.require_path    = 'lib'
+  spec.author          = 'Roman Gonzalez'
+  spec.email           = 'romanandreg@gmail.com'
+  spec.homepage        = 'http://github.com/roman'
+  spec.rubyforge_project = 'rots'
+  spec.license         = 'MIT'
 
-  s.add_dependency "date"
-  s.add_dependency "net-http"
-  s.add_dependency "openssl"
-  s.add_dependency "optparse"
-  s.add_dependency "rack", ">= 2"
-  s.add_dependency "rackup", ">= 2"
-  s.add_dependency "ruby-openid2", "~> 3.0"
-  s.add_dependency "stringio"
-  s.add_dependency "webrick"
-  s.add_dependency "yaml", "~> 0.3"
-  s.add_dependency "psych", "~> 5.1"
+  spec.add_dependency "date"
+  spec.add_dependency "net-http"
+  spec.add_dependency "openssl"
+  spec.add_dependency "optparse"
+  spec.add_dependency "rack", ">= 2"
+  spec.add_dependency "rackup", ">= 2"
+  spec.add_dependency "ruby-openid2", "~> 3.0"
+  spec.add_dependency "stringio"
+  spec.add_dependency "webrick"
+  spec.add_dependency "yaml", "~> 0.3"
+  spec.add_dependency "psych", "~> 5.1"
 
-  s.add_development_dependency "rspec", "~> 3.13"
+  spec.add_development_dependency("rspec", "~> 3.13")
+  spec.add_development_dependency("rake", ">= 13")
 end
