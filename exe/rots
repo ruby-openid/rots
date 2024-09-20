@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 # -*- ruby -*-
 
-# Require rots library this script is part of:
-require_relative "../lib/rots"
+require "rots"
 
 server_options = {
   :debugger => false,
@@ -83,7 +82,7 @@ server = Rack::Builder.new do
   end
 end
 
-puts "\x1B[32mRunning OpenID Test server on port 1123\x1B[0m" if server_options[:verbose]
+puts "\x1B[32mRunning Ruby OpenID Test Server (ROTS) on port #{server_options[:port]}\x1B[0m" if server_options[:verbose]
 
-Rackup::Server.start app: server, port: server_options[:port]
+Rackup::Server.start app: server, Port: server_options[:port]
 
