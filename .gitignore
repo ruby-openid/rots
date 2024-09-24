@@ -16,7 +16,12 @@
 /.idea/
 .ruby-version
 
-*.gemfile.lock
+# The ancient version is intentionally checked-in, in an attempt to avoid
+#   - https://github.com/rubygems/rubygems/issues/6667#issuecomment-2372529742
+# ancient.gemfile.lock
+coverage.gemfile.lock
+style.gemfile.lock
+vanilla.gemfile.lock
 
 # direnv - brew install direnv
 .env.local

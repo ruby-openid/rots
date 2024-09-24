@@ -1,0 +1,84 @@
+PATH
+  remote: ..
+  specs:
+    rots (1.0.0)
+      date
+      net-http
+      openssl
+      optparse
+      psych (~> 5.1)
+      rack (>= 2)
+      rackup (>= 2)
+      ruby-openid2 (~> 3.0, >= 3.0.3)
+      stringio
+      version_gem (~> 1.1, >= 1.1.4)
+      webrick
+      yaml (~> 0.3)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    date (3.3.4)
+    diff-lcs (1.5.1)
+    logger (1.6.1)
+    minitest (5.25.1)
+    net-http (0.4.1)
+      uri
+    openssl (3.2.0)
+    optparse (0.5.0)
+    psych (5.1.2)
+      stringio
+    rack (3.1.7)
+    rack-openid2 (2.0.1)
+      rack (>= 2.2)
+      ruby-openid2 (>= 3.0)
+      version_gem (~> 1.1, >= 1.1.4)
+    rack-session (2.0.0)
+      rack (>= 3.0.0)
+    rackup (2.1.0)
+      rack (>= 3)
+      webrick (~> 1.8)
+    rake (13.2.1)
+    rexml (3.3.7)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-block_is_expected (1.0.6)
+    rspec-core (3.13.1)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.1)
+    ruby-openid2 (3.0.3)
+      logger (~> 1.6, >= 1.6.1)
+      net-http (~> 0.4, >= 0.4.1)
+      rexml (~> 3.3, >= 3.3.7)
+      version_gem (~> 1.1, >= 1.1.4)
+    stringio (3.1.1)
+    uri (0.13.1)
+    version_gem (1.1.4)
+    webrick (1.8.2)
+    yaml (0.3.0)
+
+PLATFORMS
+  arm64-darwin-22
+  arm64-darwin-23
+  x86_64-linux
+
+DEPENDENCIES
+  minitest (>= 5, < 6)
+  rack-openid2 (>= 2)
+  rack-session (>= 1)
+  rake
+  rots!
+  rspec
+  rspec-block_is_expected
+  version_gem (~> 1.1, >= 1.1.4)
+
+BUNDLED WITH
+   2.4.22
