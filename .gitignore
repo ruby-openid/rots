@@ -1,5 +1,22 @@
-pkg/*
-tmp/*
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+.byebug_history
+
+# rspec failure tracking
+.rspec_status
 
 *.gem
-.bundle
+/.idea/
+.ruby-version
+
+*.gemfile.lock
+
+# direnv - brew install direnv
+.env.local
