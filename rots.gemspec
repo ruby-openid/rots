@@ -1,17 +1,25 @@
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "rots/version"
+# Get the GEMFILE_VERSION without *require* "my_gem/version", for code coverage accuracy
+# See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-825171399
+load "lib/rots/version.rb"
+gem_version = Rots::Version::VERSION
+Rots::Version.send(:remove_const, :VERSION)
 
 Gem::Specification.new do |spec|
-  spec.name            = "rots"
-  spec.version         = Rots::VERSION
-  spec.platform        = Gem::Platform::RUBY
-  spec.summary         = "an OpenID server for making tests of OpenID clients implementations"
+  spec.name = "rots"
+  spec.version = gem_version
+  spec.authors = ["Peter Boling", "Roman Gonzalez"]
+  spec.email = ["peter.boling@gmail.com", "romanandreg@gmail.com"]
+  spec.homepage = "http://github.com/oauth-xx/#{spec.name}"
 
-  spec.description = <<-EOF
-Ruby OpenID Test Server (ROTS) provides a basic OpenID server made in top of the Rack gem.
-With this small server, you can make dummy OpenID request for testing purposes,
-the success of the response will depend on a parameter given on the URL of the authentication request.
+  # See CONTRIBUTING.md
+  spec.cert_chain = [ENV.fetch("GEM_CERT_PATH", "certs/#{ENV.fetch("GEM_CERT_USER", ENV["USER"])}.pem")]
+  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
+
+  spec.summary = "an OpenID server for making tests of OpenID clients implementations"
+  spec.description = <<~EOF
+    Ruby OpenID Test Server (ROTS) provides a basic OpenID server made in top of the Rack gem.
+    With this small server, you can make dummy OpenID request for testing purposes,
+    the success of the response will depend on a parameter given on the URL of the authentication request.
   EOF
 
   spec.files = Dir[
@@ -27,12 +35,20 @@ the success of the response will depend on a parameter given on the URL of the a
   spec.executables = %w[
     rots
   ]
-  spec.require_path    = 'lib'
-  spec.author          = 'Roman Gonzalez'
-  spec.email           = 'romanandreg@gmail.com'
-  spec.homepage        = 'http://github.com/roman'
-  spec.rubyforge_project = 'rots'
-  spec.license         = 'MIT'
+  spec.license = "MIT"
+
+  spec.add_dependency("date")
+  spec.add_dependency("net-http")
+  spec.add_dependency("openssl")
+  spec.add_dependency("optparse")
+  spec.add_dependency("psych", "~> 5.1")
+  spec.add_dependency("rack", ">= 2")
+  spec.add_dependency("rackup", ">= 2")
+  spec.add_dependency("ruby-openid2", "~> 3.0", ">= 3.0.2")
+  spec.add_dependency("stringio")
+  spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.4")
+  spec.add_dependency("webrick")
+  spec.add_dependency("yaml", "~> 0.3")
 
   spec.add_dependency "date"
   spec.add_dependency "net-http"

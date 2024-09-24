@@ -22,3 +22,7 @@ require_relative "rots/test_helper"
 # Namespace for this gem
 module Rots
 end
+
+Rots::Version.class_eval do
+  extend VersionGem::Basic
+end
