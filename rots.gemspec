@@ -50,6 +50,7 @@ Gem::Specification.new do |spec|
     rots
   ]
   spec.license = "MIT"
+  spec.required_ruby_version = ">= 2.7.0"
 
   spec.add_dependency("date")
   spec.add_dependency("net-http")
