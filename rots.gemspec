@@ -53,7 +53,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.7.0"
 
   spec.add_dependency("date")
-  spec.add_dependency("net-http")
+  spec.add_dependency("net-http", "~> 0.4", ">= 0.4.1")
   spec.add_dependency("openssl")
   spec.add_dependency("optparse")
   spec.add_dependency("psych", "~> 5.1")

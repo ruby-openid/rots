@@ -3,7 +3,7 @@ PATH
   specs:
     rots (1.0.0)
       date
-      net-http
+      net-http (~> 0.4, >= 0.4.1)
       openssl
       optparse
       psych (~> 5.1)
@@ -59,8 +59,6 @@ GEM
       version_gem (~> 1.1, >= 1.1.4)
     rack-session (2.0.0)
       rack (>= 3.0.0)
-    rack-test (2.1.0)
-      rack (>= 1.3)
     rackup (2.1.0)
       rack (>= 3)
       webrick (~> 1.8)
@@ -188,12 +186,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug (>= 2.0.3)
+  byebug (>= 11)
   kettle-soup-cover (~> 1.0, >= 1.0.2)
-  minitest
-  rack-openid2
+  minitest (>= 5, < 6)
+  rack-openid2 (>= 2)
   rack-session (>= 1)
-  rack-test
   rake (>= 10)
   rots!
   rspec (~> 3.13)
@@ -201,7 +198,6 @@ DEPENDENCIES
   rubocop-lts (~> 10.1)
   rubocop-packaging (~> 0.5, >= 0.5.2)
   rubocop-rspec (~> 3.0)
-  ruby-openid2
   standard (~> 1.40)
   yard (~> 0.9, >= 0.9.34)
   yard-junk (~> 0.0.10)

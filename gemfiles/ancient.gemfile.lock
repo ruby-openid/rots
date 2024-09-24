@@ -3,7 +3,7 @@ PATH
   specs:
     rots (1.0.0)
       date
-      net-http
+      net-http (~> 0.4, >= 0.4.1)
       openssl
       optparse
       psych (~> 5.1)
@@ -78,7 +78,6 @@ DEPENDENCIES
   rots!
   rspec
   rspec-block_is_expected
-  version_gem (~> 1.1, >= 1.1.4)
 
 BUNDLED WITH
    2.4.22
