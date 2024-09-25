@@ -19,3 +19,4 @@ BRANCH COVERAGE:  77.78% -- 35/45 branches in 11 files
 - Modernized code (require_relative)
 - Refactored
 - GitHub Actions for CI
+- Upgraded to ruby-openid2 v3.1.0
