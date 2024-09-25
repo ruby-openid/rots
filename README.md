@@ -15,7 +15,7 @@
 [![CI Heads Build][🚎hd-wfi]][🚎hd-wf]
 [![CI Ancient Build][🚎an-wfi]][🚎an-wf]
 
-[🖇codecov-img♻️]: https://codecov.io/gh/oauth-xx/rots/graph/badge.svg?token=selEoMrZzA
+[🖇codecov-img♻️]: https://codecov.io/gh/oauth-xx/rots/graph/badge.svg?token=qycnWzl6qM
 [🖇codecov]: https://codecov.io/gh/oauth-xx/rots
 [🚎s-wf]: https://github.com/oauth-xx/rots/actions/workflows/supported.yml
 [🚎s-wfi]: https://github.com/oauth-xx/rots/actions/workflows/supported.yml/badge.svg
@@ -171,7 +171,7 @@ If you need some ideas of where to help, you could work on adding more code cove
 
 [![Coverage Graph][🔑codecov-g]][🖇codecov]
 
-[🔑codecov-g]: https://codecov.io/gh/oauth-xx/rots/graphs/tree.svg?token=selEoMrZzA
+[🔑codecov-g]: https://codecov.io/gh/oauth-xx/rots/graphs/tree.svg?token=qycnWzl6qM
 
 ## 🌈 Contributors
 
