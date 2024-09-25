@@ -2,12 +2,12 @@
   "lib/rots/server_app.rb:4029472662": [
     [66, 7, 44, "Style/SafeNavigation: Use safe navigation (`&.`) instead of checking if an object exists before calling the method.", 3155555354]
   ],
-  "rots.gemspec:1296023203": [
-    [55, 3, 27, "Gemspec/DependencyVersion: Dependency version specification is required.", 3231645354],
-    [57, 3, 30, "Gemspec/DependencyVersion: Dependency version specification is required.", 2950165766],
-    [58, 3, 31, "Gemspec/DependencyVersion: Dependency version specification is required.", 856856768],
-    [63, 3, 31, "Gemspec/DependencyVersion: Dependency version specification is required.", 4231415917],
-    [65, 3, 30, "Gemspec/DependencyVersion: Dependency version specification is required.", 2088193405]
+  "rots.gemspec:4033797215": [
+    [58, 3, 27, "Gemspec/DependencyVersion: Dependency version specification is required.", 3231645354],
+    [59, 3, 30, "Gemspec/DependencyVersion: Dependency version specification is required.", 2950165766],
+    [60, 3, 31, "Gemspec/DependencyVersion: Dependency version specification is required.", 856856768],
+    [65, 3, 31, "Gemspec/DependencyVersion: Dependency version specification is required.", 4231415917],
+    [67, 3, 30, "Gemspec/DependencyVersion: Dependency version specification is required.", 2088193405]
   ],
   "spec/rots/mocks/integration_spec.rb:2999786939": [
     [9, 16, 13, "RSpec/DescribeClass: The first argument to describe should be the class or module being tested.", 3245556507],

@@ -118,6 +118,13 @@ RSpec.describe("openid") do
 end
 ```
 
+### Note about the deprecation of stdlib gems `logger`, `rexml`, `stringio`, `net-http`, and `uri`
+
+They will not be direct dependencies until the situation with bundler is resolved.
+You will need to add them directly to downstream tools.
+
+See [this discussion](https://github.com/rubygems/rubygems/issues/7178#issuecomment-2372558363) for more information.
+
 ## How does it work?
 
 When you install the ROTS gem, a binary called rots is provided for starting the server (for more

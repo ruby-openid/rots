@@ -52,14 +52,16 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
 
+  # See: https://github.com/rubygems/rubygems/issues/7178#issuecomment-2372558363
+  # spec.add_dependency("net-http", "~> 0.4", ">= 0.4.1")
+
   spec.add_dependency("date")
-  spec.add_dependency("net-http", "~> 0.4", ">= 0.4.1")
   spec.add_dependency("openssl")
   spec.add_dependency("optparse")
   spec.add_dependency("psych", "~> 5.1")
   spec.add_dependency("rack", ">= 2")
   spec.add_dependency("rackup", ">= 2")
-  spec.add_dependency("ruby-openid2", "~> 3.0", ">= 3.0.3")
+  spec.add_dependency("ruby-openid2", "~> 3.1", ">= 3.1.0")
   spec.add_dependency("stringio")
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.4")
   spec.add_dependency("webrick")
