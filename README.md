@@ -246,7 +246,8 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
 
 ### © Copyright
 
-* Copyright (c) 2013 - 2014, 2016 - 2020, 2023 - 2024 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
+*  Copyright (c) 2009 - 2011, 2013 - 2014, 2017 Roman Gonzalez <romanandreg@gmail.com>
+*  Copyright (c) 2024 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
 
 [railsbling]: http://www.railsbling.com
 [peterboling]: http://www.peterboling.com
