@@ -127,7 +127,7 @@ See [this discussion](https://github.com/rubygems/rubygems/issues/7178#issuecomm
 
 ## How does it work?
 
-When you install the ROTS gem, a binary called rots is provided for starting the server (for more
+When you install the `rots` gem, a binary also called `rots` is provided for starting the server (for more
 info about what options you have when executing this file, check the -h option).
 
 By default, rots will have a test user called "John Doe", with an OpenID identity "john.doe".
