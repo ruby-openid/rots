@@ -65,6 +65,16 @@ Ruby OpenID Test Server (ROTS) is a dummy OpenID server that makes consumer test
 ROTS is a minimal implementation of an OpenID server, developed on top of the Rack middleware, this
 server provides an easy to use interface to make testing OpenID consumers really easy.
 
+## Installation
+
+Install the gem and add to the application's Gemfile by executing:
+
+    $ bundle add rots
+
+If bundler is not being used to manage dependencies, install the gem by executing:
+
+    $ gem install rots
+
 ## No more mocks
 
 Have you always wanted to test the authentication of an OpenID consumer implementation, but find your self
