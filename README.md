@@ -1,8 +1,5 @@
 # ROTS - Ruby OpenID Test Server
 
-<div id="badges">
-
-<div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/gem/v/rots.svg)](https://rubygems.org/gems/rots)
@@ -30,11 +27,7 @@
 [🚎an-wf]: https://github.com/oauth-xx/rots/actions/workflows/ancient.yml
 [🚎an-wfi]: https://github.com/oauth-xx/rots/actions/workflows/ancient.yml/badge.svg
 
-</div>
-
------
-
-<div align="center">
+---
 
 [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay]
 [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor]
@@ -53,12 +46,7 @@
 [🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
 [🖇patreon]: https://patreon.com/galtzo
 
-<span class="badge-buymealatte">
-<a href="https://www.buymeacoffee.com/pboling"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
-</span>
 
-</div>
-</div>
 
 Ruby OpenID Test Server (ROTS) is a dummy OpenID server that makes consumer tests dead easy.
 
@@ -264,3 +252,18 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
 [bundle-group-pattern]: https://gist.github.com/pboling/4564780
 [documentation]: http://rdoc.info/github/oauth-xx/rots/frames
 [homepage]: https://github.com/oauth-xx/rots
+
+## 🤑 One more thing
+
+You made it to the bottom of the page,
+so perhaps you'll indulge me for another 20 seconds.
+I maintain many dozens of gems, including this one,
+because I want Ruby to be a great place for people to solve problems, big and small.
+Please consider supporting my efforts via the giant yellow link below,
+or one of the others at the head of this README.
+
+[![Buy me a latte][🖇buyme-img]][🖇buyme]
+
+[🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=
+
+[🖇buyme]: https://www.buymeacoffee.com/pboling
