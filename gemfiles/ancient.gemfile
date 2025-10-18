@@ -1,0 +1,29 @@
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+source "https://rubygems.org"
+
+# Root Gemfile is only for local development only. It is not loaded on CI.
+# On CI we only need the gemspecs' dependencies (including development dependencies).
+# Exceptions, if any, will be found in gemfiles/*.gemfile
+
+# In the ancient gemfile we only load the gemspec's runtime dependencies
+# i.e. we do not load the gemspec's development dependencies,
+#   because they target Ruby 3.0+
+# Thus we load the necessary development dependencies of the gem here.
+gem "rack-openid2", ">= 2"
+gem "rack-session", ">= 1"
+gem "logger", "~> 1.6", ">= 1.6.1"
+gem "rexml", "~> 3.3", ">= 3.3.7"
+
+gem "minitest", ">= 5", "< 6"
+gem "rake"
+gem "rspec"
+gem "rspec-block_is_expected"
+
+# For debugging, casecmp is only available in Ruby 2.4+
+if RUBY_VERSION > "2.4" && ENV.fetch("DEBUG", "false").casecmp?("true")
+  gem "byebug"
+end
+
+# this gem
+gem "rots", path: "../"

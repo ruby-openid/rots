@@ -1,3 +1,5 @@
 module Rots
-  VERSION = "0.2.2"
+  module Version
+    VERSION = "1.0.0"
+  end
 end

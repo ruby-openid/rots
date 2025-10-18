@@ -1,0 +1,15 @@
+inherit_gem:
+  rubocop-lts: config/rubygem_rspec.yml
+
+AllCops:
+  Exclude:
+    - 'spec/support/*'
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
