@@ -11,6 +11,6 @@ Choose the option that best fits your use case:
 - Copyright (c) 2009 Roman Gonzalez
 - Copyright (c) 2011 Tom Quackenbush
 - Copyright (c) 2014 Tom Quackenbush
-- Copyright (c) 2024, 2026 Peter Boling
+- Copyright (c) 2024, 2026 Peter H. Boling
 - Copyright (c) 2025 Aboling0
 - Copyright (c) 2025 Annibelle Boling

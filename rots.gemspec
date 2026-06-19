@@ -20,7 +20,7 @@ gem_version =
 Gem::Specification.new do |spec|
   spec.name = "rots"
   spec.version = gem_version
-  spec.authors = ["Roman Gonzalez", "Tom Quackenbush", "Peter Boling", "Aboling0", "Annibelle Boling"]
+  spec.authors = ["Roman Gonzalez", "Tom Quackenbush", "Peter H. Boling", "Aboling0", "Annibelle Boling"]
   spec.email = ["floss@galtzo.com"]
 
   spec.summary = "💎 an OpenID server for making tests of OpenID clients implementations"
