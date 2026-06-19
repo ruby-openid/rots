@@ -1,5 +1,16 @@
 inherit_gem:
   rubocop-lts: config/rubygem_rspec.yml
+inherit_from:
+  - .rubocop_rspec.yml
+plugins:
+  - rubocop-on-rbs
+  - rubocop-packaging
+# This tells RuboCop to add the exclusions in this file
+# to the default exclusions (and those from other inherited files),
+# rather than overwriting them.
+inherit_mode:
+  merge:
+    - Exclude
 
 AllCops:
   Exclude:
@@ -13,3 +24,7 @@ RSpec/NestedGroups:
 
 RSpec/ExampleLength:
   Enabled: false
+RBS:
+  Enabled: true
+Layout/IndentationConsistency:
+  Exclude: ['*.md']

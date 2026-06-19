@@ -1,4 +1,6 @@
 # stdlib in Ruby < 3, gem after
+require "version_gem"
+
 require "net/http"
 
 # External Libraries
