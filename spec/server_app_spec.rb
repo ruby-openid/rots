@@ -3,7 +3,7 @@ RSpec.describe Rots::ServerApp do
     it "returns a helpful message saying that is an OpenID endpoint" do
       request = Rack::MockRequest.new(Rots::ServerApp.new(
         {"sreg" => {}},
-        {storage: File.join(*%w(. tmp rots))},
+        {storage: File.join(*%w[. tmp rots])}
       ))
       response = request.get("/")
       expect(response).to be_ok
@@ -21,10 +21,10 @@ RSpec.describe Rots::ServerApp do
             "nickname" => "johndoe",
             "fullname" => "John Doe",
             "dob" => "1985-09-21",
-            "gender" => "M",
-          },
+            "gender" => "M"
+          }
         },
-        {storage: File.join(*%w(. tmp rots))},
+        {storage: File.join(*%w[. tmp rots])}
       ))
     end
 
@@ -77,7 +77,7 @@ RSpec.describe Rots::ServerApp do
               "openid.success" => true,
               "openid.ns.sreg" => OpenID::SReg::NS_URI,
               "openid.sreg.required" => "email,nickname,fullname",
-              "openid.sreg.optional" => "dob,gender",
+              "openid.sreg.optional" => "dob,gender"
             })
             params = openid_params(response)
             expect(params["openid.sreg.email"]).to eq("john@doe.com")

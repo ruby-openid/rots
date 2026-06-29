@@ -31,7 +31,7 @@ class Rots::IdentityPageApp
     "http://%s:%d/server/%s" % [
       @request.host,
       @request.port,
-      (@request.params["openid.success"] ? "?openid.success=true" : ""),
+      (@request.params["openid.success"] ? "?openid.success=true" : "")
     ]
   end
 end

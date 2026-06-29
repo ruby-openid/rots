@@ -12,9 +12,9 @@ authors:
     orcid: 'https://orcid.org/0009-0008-8519-441X'
 identifiers:
   - type: url
-    value: 'https://github.com/pboling/rots'
+    value: 'https://github.com/ruby-openid/rots'
     description: "rots"
-repository-code: 'https://github.com/pboling/rots'
+repository-code: 'https://github.com/ruby-openid/rots'
 abstract: >-
   rots
 license: See license file

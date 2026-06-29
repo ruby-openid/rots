@@ -30,24 +30,24 @@ RSpec.describe "integration" do
     it "parses header" do
       assert_equal(
         {"identity" => "http://example.com/"},
-        Rack::OpenID.parse_header('OpenID identity="http://example.com/"'),
+        Rack::OpenID.parse_header('OpenID identity="http://example.com/"')
       )
       assert_equal(
         {"identity" => "http://example.com/?foo=bar"},
-        Rack::OpenID.parse_header('OpenID identity="http://example.com/?foo=bar"'),
+        Rack::OpenID.parse_header('OpenID identity="http://example.com/?foo=bar"')
       )
       assert_equal(
         {"identity" => "http://example.com/", "return_to" => "http://example.org/"},
-        Rack::OpenID.parse_header('OpenID identity="http://example.com/", return_to="http://example.org/"'),
+        Rack::OpenID.parse_header('OpenID identity="http://example.com/", return_to="http://example.org/"')
       )
       assert_equal(
         {"identity" => "http://example.com/", "required" => ["nickname", "email"]},
-        Rack::OpenID.parse_header('OpenID identity="http://example.com/", required="nickname,email"'),
+        Rack::OpenID.parse_header('OpenID identity="http://example.com/", required="nickname,email"')
       )
 
       # ensure we don't break standard HTTP basic auth
       assert_empty(
-        Rack::OpenID.parse_header('Realm="Example"'),
+        Rack::OpenID.parse_header('Realm="Example"')
       )
     end
   end
@@ -177,7 +177,7 @@ RSpec.describe "integration" do
       let(:options) {
         {
           required: ["http://axschema.org/namePerson/friendly", "http://axschema.org/contact/email"],
-          optional: "http://axschema.org/namePerson",
+          optional: "http://axschema.org/namePerson"
         }
       }
 
@@ -196,7 +196,7 @@ RSpec.describe "integration" do
       let(:options) {
         {
           "oauth[consumer]": "www.example.com",
-          "oauth[scope]": ["http://docs.google.com/feeds/", "http://spreadsheets.google.com/feeds/"],
+          "oauth[scope]": ["http://docs.google.com/feeds/", "http://spreadsheets.google.com/feeds/"]
         }
       }
 
@@ -220,7 +220,7 @@ RSpec.describe "integration" do
       let(:options) {
         {
           "pape[preferred_auth_policies]": ["test_policy1", "test_policy2"],
-          "pape[max_auth_age]": 600,
+          "pape[max_auth_age]": 600
         }
       }
 

@@ -31,7 +31,7 @@ module Rots
             headers = {
               "X-Path" => env["PATH_INFO"],
               "X-Method" => env["REQUEST_METHOD"],
-              "X-Query-String" => env["QUERY_STRING"],
+              "X-Query-String" => env["QUERY_STRING"]
             }
             if resp.status == :success
               [200, headers, [resp.status.to_s]]

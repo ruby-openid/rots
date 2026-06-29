@@ -44,7 +44,7 @@ module Rots
         [
           200,
           {Rack::CONTENT_TYPE => "text/html"},
-          ["<html><body><h1>ROTS => This is an OpenID endpoint</h1></body></html>"],
+          ["<html><body><h1>ROTS => This is an OpenID endpoint</h1></body></html>"]
         ]
       else
         yield
@@ -132,9 +132,9 @@ module Rots
         {
           Rack::CONTENT_LENGTH => "0",
           Rack::CONTENT_TYPE => "text/plain",
-          "Location" => uri,
+          "Location" => uri
         },
-        [],
+        []
       ]
     end
 
@@ -142,7 +142,7 @@ module Rots
       [
         400,
         {Rack::CONTENT_TYPE => "text/plain", Rack::CONTENT_LENGTH => "0"},
-        [],
+        []
       ]
     end
 

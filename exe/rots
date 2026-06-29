@@ -8,7 +8,7 @@ server_options = {
   port: 1123,
   verbose: true,
   storage: File.join(".", "tmp", "rots"),
-  config: <<~DEFAULT_CONFIG,
+  config: <<~DEFAULT_CONFIG
     # Default configuration file
     identity: john.doe
     sreg:
@@ -30,7 +30,7 @@ opts = OptionParser.new do |opts|
   opts.on(
     "-p",
     "--port PORT",
-    "use PORT (default: 1123)",
+    "use PORT (default: 1123)"
   ) do |port|
     server_options[:port] = port
   end
@@ -38,7 +38,7 @@ opts = OptionParser.new do |opts|
   opts.on(
     "-s",
     "--storage PATH",
-    "use PATH as the OpenID Server storage path (default: ./tmp/rots)",
+    "use PATH as the OpenID Server storage path (default: ./tmp/rots)"
   ) do |storage_path|
     server_options[:storage] = storage_path
   end
@@ -46,7 +46,7 @@ opts = OptionParser.new do |opts|
   opts.on(
     "-c",
     "--config FILE.yaml",
-    "server configuration YAML file",
+    "server configuration YAML file"
   ) do |config_path|
     abort("\x1B[31mConfiguration file #{config_path} not found\x1B[0m") unless File.exist?(config_path)
     server_options[:config] = File.new(config_path)
@@ -55,7 +55,7 @@ opts = OptionParser.new do |opts|
   opts.on(
     "-s",
     "--silent",
-    "If specified, the server will be in silent mode",
+    "If specified, the server will be in silent mode"
   ) do
     server_options[:verbose] = false
   end

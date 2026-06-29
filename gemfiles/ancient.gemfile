@@ -10,9 +10,9 @@ source "https://rubygems.org"
 # i.e. we do not load the gemspec's development dependencies,
 #   because they target Ruby 3.0+
 # Thus we load the necessary development dependencies of the gem here.
+gem "logger", "~> 1.6", ">= 1.6.1"
 gem "rack-openid2", ">= 2"
 gem "rack-session", ">= 1"
-gem "logger", "~> 1.6", ">= 1.6.1"
 gem "rexml", "~> 3.3", ">= 3.3.7"
 
 gem "minitest", ">= 5", "< 6"

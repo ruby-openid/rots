@@ -10,7 +10,7 @@ module Rots
 
         {
           url: openid_response_uri.to_s,
-          query_params: openid_response_qs,
+          query_params: openid_response_qs
         }
       end
 
@@ -54,7 +54,7 @@ module Rots
           "openid.mode" => "checkid_setup",
           "openid.claimed_id" => "john.doe",
           "openid.identity" => "john.doe",
-          "openid.return_to" => "http://www.google.com",
+          "openid.return_to" => "http://www.google.com"
           # need to specify the openid_handle by hand
         }.merge!(params)
       end
@@ -70,7 +70,7 @@ module Rots
           "openid.session_type" => "DH-SHA1",
           "openid.assoc_type" => "HMAC-SHA1",
           "openid.dh_consumer_public" =>
-            "U672/RsDUNxAFFAXA+ShVh5LMD2CRdsoqdqhDCPUzfCNy2f44uTWuid/MZuGfJmiVA7QmxqM3GSb8EVq3SGK8eGEwwyzUtatqHidx72rfwAav5AUrZTnwSPQJyiCFrKNGmNhXdRJzcfzSkgaC3hVz2kpADzEevIExG6agns1sYY=",
+            "U672/RsDUNxAFFAXA+ShVh5LMD2CRdsoqdqhDCPUzfCNy2f44uTWuid/MZuGfJmiVA7QmxqM3GSb8EVq3SGK8eGEwwyzUtatqHidx72rfwAav5AUrZTnwSPQJyiCFrKNGmNhXdRJzcfzSkgaC3hVz2kpADzEevIExG6agns1sYY="
         }
       end
     end

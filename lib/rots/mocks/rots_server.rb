@@ -2,6 +2,7 @@ module Rots
   module Mocks
     class RotsServer
       extend Forwardable
+
       SERVER_URL = "http://localhost:9292"
       DEFAULT_CONFIG = {
         "identity" => "john.doe",
@@ -10,8 +11,8 @@ module Rots
           "fullname" => "John Doe",
           "email" => "jhon@doe.com",
           "dob" => Date.parse("1985-09-21"),
-          "gender" => "M",
-        }.freeze,
+          "gender" => "M"
+        }.freeze
       }.freeze
 
       attr_reader :app, :config
