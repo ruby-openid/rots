@@ -33,6 +33,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Package configured license files in gem release file lists.
+
 ### Security
 
 ## 1.0.0 - 2024-09-24
