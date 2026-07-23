@@ -24,6 +24,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- The `rots` executable now supports `-v` / `--version` and prints a standard
+  startup header on normal runs.
 - Retemplated generated project metadata, support documentation, CI workflows,
   binstubs, and development dependency floors with `kettle-jem` v7.0.0.
 

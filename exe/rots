@@ -1,7 +1,16 @@
 #!/usr/bin/env ruby
 # -*- ruby -*-
 
+script_basename = File.basename(__FILE__)
+require_relative "../lib/rots/version"
+if ARGV.any? { |arg| arg == "-v" || arg == "--version" }
+  puts Rots::Version::VERSION
+  exit(0)
+end
+
 require "rots"
+
+puts "== #{script_basename} v#{Rots::Version::VERSION} =="
 
 server_options = {
   debugger: false,
