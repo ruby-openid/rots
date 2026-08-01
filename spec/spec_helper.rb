@@ -28,6 +28,7 @@ end
 
 # External RSpec & related config
 require "kettle/test/rspec"
+# `kettle/test/rspec` installs harness helpers documented in spec/README.md.
 
 # this gem:
 require "rots"

@@ -1,16 +1,16 @@
 {
-  "exe/rots:3563923747": [
-    [78, 15, 4, "Security/YAMLLoad: Prefer using `YAML.safe_load` over `YAML.load`.", 2087658595]
+  "exe/rots:3857788086": [
+    [87, 15, 4, "Security/YAMLLoad: Prefer using `YAML.safe_load` over `YAML.load`.", 2087658595]
   ],
   "lib/rots/server_app.rb:973991606": [
     [66, 7, 44, "Style/SafeNavigation: Use safe navigation (`&.`) instead of checking if an object exists before calling the method.", 3155555354]
   ],
-  "rots.gemspec:4224838573": [
-    [118, 3, 27, "Gemspec/DependencyVersion: Dependency version specification is required.", 3231645354],
-    [119, 3, 30, "Gemspec/DependencyVersion: Dependency version specification is required.", 2950165766],
-    [120, 3, 31, "Gemspec/DependencyVersion: Dependency version specification is required.", 856856768],
-    [125, 3, 31, "Gemspec/DependencyVersion: Dependency version specification is required.", 4231415917],
-    [127, 3, 30, "Gemspec/DependencyVersion: Dependency version specification is required.", 2088193405]
+  "rots.gemspec:1375536374": [
+    [115, 3, 27, "Gemspec/DependencyVersion: Dependency version specification is required.", 3231645354],
+    [116, 3, 30, "Gemspec/DependencyVersion: Dependency version specification is required.", 2950165766],
+    [117, 3, 31, "Gemspec/DependencyVersion: Dependency version specification is required.", 856856768],
+    [122, 3, 31, "Gemspec/DependencyVersion: Dependency version specification is required.", 4231415917],
+    [124, 3, 30, "Gemspec/DependencyVersion: Dependency version specification is required.", 2088193405]
   ],
   "spec/rots/mocks/integration_spec.rb:1610538235": [
     [9, 16, 13, "RSpec/DescribeClass: The first argument to describe should be the class or module being tested.", 3245556507],
