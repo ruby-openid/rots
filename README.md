@@ -21,6 +21,15 @@ I've summarized my thoughts in [this blog post](https://dev.to/galtzo/hostile-ta
 
 ## 🌻 Synopsis <a href="https://discord.gg/3qme4XHNKN"><img alt="Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-128px.svg" width="8%" align="right"/></a> <a href="https://ruby-toolbox.com"><img alt="ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5" src="https://logos.galtzo.com/assets/images/ruby-lang/avatar-128px.svg" width="8%" align="right"/></a>
 
+ROTS is a small Rack-based OpenID 2.0 provider for testing relying-party
+implementations. It supplies predictable identity and server endpoints so an
+integration suite can exercise discovery, association, authentication, and
+extension handling without depending on a public provider.
+
+It is a test server, not a production identity provider. Its responses are
+driven by the test configuration and request parameters, making it useful for
+deterministic client tests.
+
 ## 💡 Info you can shake a stick at
 
 | Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace] |
@@ -118,6 +127,27 @@ gem install rots
 ```
 
 ## ⚙️ Configuration
+
+Run the executable directly or point it at a YAML configuration file:
+
+```console
+rots --port 1123 --storage ./tmp/rots --config rots.yml
+```
+
+The YAML file accepts an `identity` path and optional `sreg` values. For
+example:
+
+```yaml
+identity: john.doe
+sreg:
+  nickname: jdoe
+  fullname: John Doe
+  email: john@example.test
+```
+
+The default server listens on port `1123`, stores OpenID state in `./tmp/rots`,
+and exposes the identity page at `/<identity>` and the provider endpoint at
+`/server`. Use a separate storage directory for parallel test processes.
 
 ## 🔧 Basic Usage
 
