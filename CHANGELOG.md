@@ -105,10 +105,13 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Security
 
 ## 1.0.0 - 2024-09-24
+
 COVERAGE:  96.33% -- 236/245 lines in 11 files
 BRANCH COVERAGE:  77.78% -- 35/45 branches in 11 files
 37.84% documented
+
 ### Fixed
+
 - More tests & switch to RSpec
 - Modernized code (require_relative)
 - Refactored
