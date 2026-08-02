@@ -10,7 +10,7 @@ PATH
       rackup (>= 2)
       ruby-openid2 (~> 3.1, >= 3.1.0)
       stringio
-      version_gem (~> 1.1, >= 1.1.14)
+      version_gem (~> 1.1, >= 1.1.15)
       webrick
       yaml (~> 0.3)
 
@@ -292,7 +292,7 @@ PATH
   remote: /var/home/pboling/src/my/ruby-openid/ruby-openid2
   specs:
     ruby-openid2 (3.1.0)
-      version_gem (~> 1.1, >= 1.1.14)
+      version_gem (~> 1.1, >= 1.1.15)
 
 GEM
   remote: https://gem.coop/
@@ -389,38 +389,38 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.20.0)
-    kettle-dev (2.5.14)
+    kettle-dev (2.5.16)
       emoji_regex (>= 15.0)
-      kettle-gha-pins (~> 0.3, >= 0.3.3)
-      kettle-ndjson (~> 0.1, >= 0.1.9)
-      kettle-rb (~> 0.1, >= 0.1.7)
-      kettle-test (~> 2.0, >= 2.0.12)
+      kettle-gha-pins (~> 0.3, >= 0.3.5)
+      kettle-ndjson (~> 0.1, >= 0.1.10)
+      kettle-rb (~> 0.1, >= 0.1.8)
+      kettle-test (~> 2.0, >= 2.0.18)
       ruby-progressbar (~> 1.13)
       tty-progressbar (~> 0.18)
-    kettle-drift (1.0.9)
+    kettle-drift (1.0.10)
       version_gem (~> 1.1, >= 1.1.14)
-    kettle-family (1.2.20)
+    kettle-family (1.2.22)
       command_kit (~> 0.6)
       command_kit-completion (~> 0.1)
-      kettle-dev (~> 2.3, >= 2.5.13)
-      kettle-test (~> 2.0, >= 2.0.14)
+      kettle-dev (~> 2.3, >= 2.5.16)
+      kettle-test (~> 2.0, >= 2.0.18)
       tsort (~> 0.2)
       tty-progressbar (~> 0.18)
-    kettle-gha-pins (0.3.4)
+    kettle-gha-pins (0.3.5)
       ruby-progressbar (~> 1.13)
       tty-progressbar (~> 0.18)
       version_gem (~> 1.1, >= 1.1.14)
-    kettle-ndjson (0.1.9)
+    kettle-ndjson (0.1.10)
       version_gem (~> 1.1, >= 1.1.14)
-    kettle-rb (0.1.7)
-    kettle-soup-cover (3.0.7)
+    kettle-rb (0.1.8)
+    kettle-soup-cover (3.0.9)
       kettle-wash (~> 0.1, >= 0.1.3)
       simplecov (>= 1.0)
       simplecov-cobertura (>= 4.0)
       simplecov-console (~> 0.9, >= 0.9.5)
       simplecov-rcov (~> 0.3, >= 0.3.7)
       simplecov_lcov_formatter (~> 0.9, >= 0.9.0)
-    kettle-test (2.0.17)
+    kettle-test (2.0.18)
       appraisal2 (~> 3.0, >= 3.0.6)
       backports (~> 3.0)
       rspec (~> 3.0)
@@ -449,7 +449,7 @@ GEM
     mutex_m (0.3.0)
     nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
-    nomono (1.1.2)
+    nomono (1.1.4)
     openssl (4.0.2)
     optparse (0.8.1)
     ostruct (0.6.3)
@@ -629,7 +629,7 @@ GEM
       simplecov (>= 0.4.1)
     simplecov_lcov_formatter (0.9.0)
       simplecov (>= 0.18)
-    sorbet-runtime (0.6.13392)
+    sorbet-runtime (0.6.13393)
     standard (1.56.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -673,7 +673,7 @@ GEM
     toml-rb (4.2.1)
       citrus (~> 3.0, > 3.0)
       racc (~> 1.7)
-    tree_sitter_language_pack (1.13.7-x86_64-linux)
+    tree_sitter_language_pack (1.14.0-x86_64-linux)
       sorbet-runtime (~> 0.5)
     tsort (0.2.0)
     tty-cursor (0.7.1)
@@ -688,7 +688,7 @@ GEM
       rspec (>= 3.10)
       version_gem (~> 1.1, >= 1.1.14)
     unicode-display_width (2.6.0)
-    version_gem (1.1.14)
+    version_gem (1.1.15)
     webrick (1.9.2)
     yaml (0.4.0)
     yaml-converter (0.2.4)
@@ -748,12 +748,12 @@ DEPENDENCIES
   go-merge!
   irb (~> 1.17)
   json-merge!
-  kettle-dev (~> 2.5, >= 2.5.14)
-  kettle-drift (~> 1.0, >= 1.0.9)
-  kettle-family (~> 1.2, >= 1.2.17)
+  kettle-dev (~> 2.5, >= 2.5.16)
+  kettle-drift (~> 1.0, >= 1.0.10)
+  kettle-family (~> 1.2, >= 1.2.22)
   kettle-jem!
-  kettle-soup-cover (~> 3.0, >= 3.0.7)
-  kettle-test (~> 2.0, >= 2.0.17)
+  kettle-soup-cover (~> 3.0, >= 3.0.8)
+  kettle-test (~> 2.0, >= 2.0.18)
   kramdown (~> 2.5, >= 2.5.2)
   kramdown-merge!
   kramdown-parser-gfm (~> 1.1)
@@ -761,7 +761,7 @@ DEPENDENCIES
   markly-merge!
   minitest (>= 5, < 6)
   mutex_m (~> 0.2)
-  nomono (~> 1.1, >= 1.1.2)
+  nomono (~> 1.1, >= 1.1.3)
   parslet-toml-merge!
   plain-merge!
   prism-merge!
@@ -783,7 +783,6 @@ DEPENDENCIES
   rubocop-minitest (~> 0.40, >= 0.40.0)
   rubocop-on-rbs (~> 2.0, >= 2.0.0)
   rubocop-packaging (~> 0.6, >= 0.6.0)
-  rubocop-rspec (~> 3.9)
   rubocop-ruby2_7 (~> 3.0, >= 3.0.5)
   ruby-merge!
   ruby-openid2!
@@ -792,10 +791,12 @@ DEPENDENCIES
   smorg-rb!
   standard (~> 1.56, ~> 1.54, >= 1.56.0, >= 1.54.0)
   stone_checksums (~> 1.0, >= 1.0.8)
+  stringio (>= 3.0)
   toml-merge!
   tree_haver!
   turbo_tests2 (~> 3.2, >= 3.2.4)
   typescript-merge!
+  webrick (~> 1.9)
   yaml-converter (~> 0.2, >= 0.2.4)
   yaml-merge!
   yard (~> 0.9, >= 0.9.45, >= 0.9.44)
@@ -804,7 +805,7 @@ DEPENDENCIES
   yard-lint (~> 1.10, >= 1.10.2)
   yard-relative_markdown_links (~> 0.6)
   yard-timekeeper (~> 0.2, >= 0.2.5)
-  yard-yaml (~> 0.2, >= 0.2.3)
+  yard-yaml (~> 0.2, >= 0.2.4)
   zip-merge!
 
 BUNDLED WITH

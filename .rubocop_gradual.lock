@@ -5,7 +5,7 @@
   "lib/rots/server_app.rb:973991606": [
     [66, 7, 44, "Style/SafeNavigation: Use safe navigation (`&.`) instead of checking if an object exists before calling the method.", 3155555354]
   ],
-  "rots.gemspec:1375536374": [
+  "rots.gemspec:2921605050": [
     [115, 3, 27, "Gemspec/DependencyVersion: Dependency version specification is required.", 3231645354],
     [116, 3, 30, "Gemspec/DependencyVersion: Dependency version specification is required.", 2950165766],
     [117, 3, 31, "Gemspec/DependencyVersion: Dependency version specification is required.", 856856768],
