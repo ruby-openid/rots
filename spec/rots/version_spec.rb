@@ -1,4 +1,5 @@
 require "anonymous_loader"
+require "rots"
 RSpec.describe Rots::Version do
   it_behaves_like "a Version module", described_class
 
