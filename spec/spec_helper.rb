@@ -6,7 +6,7 @@ require "rack/mock"
 require "minitest/assertions"
 
 # RSpec Configs
-require "debug"
+require "debug" if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("2.7")
 require "config/rspec/rspec_block_is_expected"
 require "config/rspec/rspec_core"
 require "config/rspec/version_gem"
