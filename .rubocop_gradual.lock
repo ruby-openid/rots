@@ -2,6 +2,9 @@
   "exe/rots:3857788086": [
     [87, 15, 4, "Security/YAMLLoad: Prefer using `YAML.safe_load` over `YAML.load`.", 2087658595]
   ],
+  "gemfiles/modular/templating.gemfile:3018447732": [
+    [14, 3, 47, "Bundler/DuplicatedGem: Gem `tree_sitter_language_pack` requirements already given on line 10 of the Gemfile.", 3843603197]
+  ],
   "lib/rots/server_app.rb:973991606": [
     [66, 7, 44, "Style/SafeNavigation: Use safe navigation (`&.`) instead of checking if an object exists before calling the method.", 3155555354]
   ],
