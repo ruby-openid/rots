@@ -151,6 +151,17 @@ and exposes the identity page at `/<identity>` and the provider endpoint at
 
 ## 🔧 Basic Usage
 
+Start ROTS with a filesystem-backed identity and then point an OpenID consumer
+at the provider endpoint:
+
+```console
+rots --port 1123 --storage ./tmp/rots --config rots.yml
+```
+
+With the default identity, the identity page is served below `/<identity>`
+and the provider endpoint is available at `/server`. Use a separate storage
+directory for each concurrent development or test process.
+
 ## 🦷 FLOSS Funding
 
 While ruby-openid tools are free software and will always be, the project would benefit immensely from some funding.
