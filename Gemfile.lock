@@ -14,12 +14,6 @@ PATH
       webrick
       yaml (~> 0.3)
 
-PATH
-  remote: /var/home/pboling/src/my/ruby-openid/ruby-openid2
-  specs:
-    ruby-openid2 (3.1.0)
-      version_gem (~> 1.1, >= 1.1.15)
-
 GEM
   remote: https://gem.coop/
   specs:
@@ -451,6 +445,8 @@ GEM
       ast-merge (= 7.1.9)
       tree_haver (= 7.1.9)
       version_gem (~> 1.1, >= 1.1.15)
+    ruby-openid2 (3.1.0)
+      version_gem (~> 1.1, >= 1.1.4)
     ruby-progressbar (1.13.0)
     ruby_engine (2.0.3)
     ruby_version (1.0.3)
@@ -616,7 +612,6 @@ DEPENDENCIES
   rubocop-on-rbs (~> 2.0, >= 2.0.0)
   rubocop-packaging (~> 0.6, >= 0.6.0)
   rubocop-ruby2_7 (~> 3.0, >= 3.0.7)
-  ruby-openid2!
   ruby-progressbar (~> 1.13)
   standard (~> 1.54, >= 1.54.0)
   stone_checksums (~> 1.0, >= 1.0.8)
