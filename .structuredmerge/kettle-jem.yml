@@ -118,8 +118,8 @@ dependency_conflicts:
     - gem: rubocop-packaging
       direct: rots.gemspec
       modular: gemfiles/modular/style.gemfile
-      action: remove_modular_gem
-      reason: "rots.gemspec owns this style dependency."
+      action: keep_both
+      reason: "The gemspec constrains the compatible version; the modular declaration selects the required fork source."
     - gem: standard
       direct: rots.gemspec
       modular: gemfiles/modular/style.gemfile
