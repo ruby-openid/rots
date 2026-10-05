@@ -2,7 +2,7 @@
 # -*- ruby -*-
 
 script_basename = File.basename(__FILE__)
-require_relative "../lib/rots/version"
+require "rots/version"
 if ARGV.any? { |arg| arg == "-v" || arg == "--version" }
   puts Rots::Version::VERSION
   exit(0)

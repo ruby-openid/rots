@@ -1,11 +1,19 @@
 {
+  "- gem: rubocop-packaging\ndirect: rots.gemspec": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        118,
+        123
+      ]
+    }
+  ],
   "action: remove_modular_gem\nreason: \"rots.gemspec owns this style dependency.\"": [
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
         116,
-        121,
-        126
+        131
       ]
     }
   ],
@@ -15,7 +23,16 @@
       "lines": [
         114,
         119,
-        124
+        129
+      ]
+    }
+  ],
+  "exec_cmd: \"kettle-test\"\nrubygems: latest": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        43,
+        49
       ]
     }
   ],
@@ -24,8 +41,7 @@
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
         115,
-        120,
-        125
+        130
       ]
     }
   ]

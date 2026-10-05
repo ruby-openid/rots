@@ -18,7 +18,7 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from rots.gemspec
 gemspec
 
-gem "kettle-family", "~> 1.3", ">= 1.3.1"
+gem "kettle-family", "~> 1.3", ">= 1.3.4"
 
 # Local workspace dependency wiring for *_local.gemfile overrides
 gem "nomono", "~> 1.1", ">= 1.1.6", require: false # ruby >= 3.2.0
@@ -37,7 +37,41 @@ if direct_sibling_gems.any? &&
       ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?)
   direct_sibling_dev_was_set = ENV.key?("RUBY_OPENID_DEV")
   direct_sibling_dev_original = ENV.fetch("RUBY_OPENID_DEV", nil)
-  require "nomono/bundler"
+  # Bootstrapping nomono here cannot rely on a plain `gem "nomono", ...` line.
+  # Bundler records that dependency during Gemfile evaluation, but it does not
+  # activate that exact version before the immediate `require "nomono/bundler"`.
+  nomono_activation_requirements = ["~> 1.1", ">= 1.1.6"]
+  nomono_requirement = Gem::Requirement.new(nomono_activation_requirements)
+  nomono_already_activated = Gem.loaded_specs["nomono"]
+  nomono_lockfile = File.expand_path("Gemfile.lock", __dir__)
+  nomono_locked_spec = nil
+  if File.file?(nomono_lockfile)
+    require "bundler"
+    nomono_locked_spec = Bundler::LockfileParser
+      .new(Bundler.read_file(nomono_lockfile))
+      .specs
+      .find { |spec| spec.name == "nomono" }
+  end
+  nomono_local_loader = if nomono_locked_spec && nomono_locked_spec.source.is_a?(Bundler::Source::Path)
+    File.expand_path(
+      File.join(nomono_locked_spec.source.path, "lib", "nomono", "bundler"),
+      File.dirname(nomono_lockfile)
+    )
+  end
+  if nomono_local_loader && File.file?("#{nomono_local_loader}.rb")
+    require nomono_local_loader
+  else
+    if !nomono_already_activated || !nomono_requirement.satisfied_by?(nomono_already_activated.version)
+      nomono_locked_installed = nomono_locked_spec &&
+        Gem::Specification.find_all_by_name("nomono").any? { |spec| spec.version == nomono_locked_spec.version }
+      nomono_locked = nomono_locked_spec &&
+        nomono_locked_installed &&
+        nomono_requirement.satisfied_by?(nomono_locked_spec.version)
+      nomono_activation_requirements = ["= #{nomono_locked_spec.version}"] if nomono_locked
+    end
+    Kernel.send(:gem, "nomono", *nomono_activation_requirements)
+    require "nomono/bundler"
+  end
   begin
     ENV["RUBY_OPENID_DEV"] = File.expand_path("..", __dir__) if direct_sibling_templating && !direct_sibling_local
 
