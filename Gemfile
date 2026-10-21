@@ -18,7 +18,7 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from rots.gemspec
 gemspec
 
-gem "kettle-family", "~> 1.3", ">= 1.3.4"
+gem "kettle-family", "~> 1.3", ">= 1.3.29"
 
 # Local workspace dependency wiring for *_local.gemfile overrides
 gem "nomono", "~> 1.1", ">= 1.1.14", require: false # ruby >= 3.2.0
@@ -40,7 +40,7 @@ if direct_sibling_gems.any? &&
   # Bootstrapping nomono here cannot rely on a plain `gem "nomono", ...` line.
   # Bundler records that dependency during Gemfile evaluation, but it does not
   # activate that exact version before the immediate `require "nomono/bundler"`.
-  nomono_activation_requirements = ["~> 1.1", ">= 1.1.6"]
+  nomono_activation_requirements = ["~> 1.1", ">= 1.1.14"]
   nomono_requirement = Gem::Requirement.new(nomono_activation_requirements)
   nomono_already_activated = Gem.loaded_specs["nomono"]
   nomono_lockfile = File.expand_path("Gemfile.lock", __dir__)
@@ -77,6 +77,7 @@ if direct_sibling_gems.any? &&
 
     eval_nomono_gems(
       gems: direct_sibling_gems,
+      requirements: {"ruby-openid2" => ["~> 3.1", ">= 3.1.0"]},
       prefix: "RUBY_OPENID",
       path_env: "RUBY_OPENID_DEV",
       root: ["src", "my", "ruby-openid"]
@@ -92,8 +93,18 @@ if direct_sibling_gems.any? &&
   end
 end
 
-# Templating (env-switched: STRUCTUREDMERGE_DEV=/path/to/structuredmerge/ruby/gems for local paths)
-eval_gemfile "gemfiles/modular/templating.gemfile" if ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
+# Templating and the StructuredMerge family share this modular Gemfile.
+# kettle-jem needs StructuredMerge to template, and kettle-changelog needs it at
+# runtime (ast-crispr-markdown-markly -> markdown-merge -> tree_haver), so the
+# test, lint, and release bundles resolve the family too. While the family is
+# only partially released, registry copies pin the last published version exactly
+# and cannot be satisfied alongside a local lockstep version, so a partial local
+# wiring fails version solving for every command in the bundle.
+#
+# (env-switched: STRUCTUREDMERGE_DEV=/path/to/structuredmerge/ruby/gems for local paths)
+eval_gemfile "gemfiles/modular/templating.gemfile" if
+  ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero? ||
+    ENV.fetch("STRUCTUREDMERGE_DEV", "false").casecmp("false") != 0
 
 # Debugging
 eval_gemfile "gemfiles/modular/debug.gemfile"

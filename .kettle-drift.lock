@@ -8,12 +8,30 @@
       ]
     }
   ],
+  "- ruby: \"ruby\"\nappraisal: \"current\"": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        41,
+        47
+      ]
+    }
+  ],
   "action: remove_modular_gem\nreason: \"rots.gemspec owns this style dependency.\"": [
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
         116,
         131
+      ]
+    }
+  ],
+  "config: .licenserc.yaml\nmode: \"check\"": [
+    {
+      "file": ".github/workflows/license-eye.yml",
+      "lines": [
+        49,
+        62
       ]
     }
   ],
@@ -31,8 +49,8 @@
     {
       "file": ".github/workflows/current.yml",
       "lines": [
-        43,
-        49
+        44,
+        50
       ]
     }
   ],

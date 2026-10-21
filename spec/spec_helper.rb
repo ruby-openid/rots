@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # External library dependencies
 require "rack/openid" # rack-openid2
 require "rack/openid/simple_auth" # Not loaded by rack-openid2, by default
