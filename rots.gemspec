@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Roman Gonzalez", "Tom Quackenbush", "Peter H. Boling", "Annibelle Boling"]
   spec.email = ["floss@galtzo.com"]
 
-  spec.summary = "💎 an OpenID server for making tests of OpenID clients implementations"
+  spec.summary = "🧪 an OpenID server for making tests of OpenID clients implementations"
   spec.description = <<~EOF
     Ruby OpenID Test Server (ROTS) provides a basic OpenID server made in top of the Rack gem.
     With this small server, you can make dummy OpenID request for testing purposes,
